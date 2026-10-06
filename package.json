@@ -1,0 +1,37 @@
+{
+  "name": "copilot-adapter",
+  "version": "1.0.0",
+  "description": "Proxy mínimo e seguro: API OpenAI-compatible sobre @github/copilot-sdk (somente texto, sem ferramentas)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "@github/copilot-sdk": "^1.0.16",
+    "fastify": "^5.12.5",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.4",
+    "eslint": "^10.12.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^5.0.3"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "bin": {
+    "copilot-adapter": "dist/index.js"
+  }
+}
